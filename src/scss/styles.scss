@@ -1,0 +1,50 @@
+.app{
+	.appcontainer {
+	    border: 1px solid red;
+	}
+	.list{
+		border:1px solid yellow;
+		height: 250px;
+	    overflow-y: scroll;
+	    ul{
+	    	list-style: none;
+	    	padding:0px;
+			li{
+			    background: #f7f7f7;
+			    height: 50px;
+			    display: flex;
+			    align-items: center;
+			    padding-left: 10px;
+			    margin-top: 3px;
+			    cursor: pointer;
+			    p{
+			    	margin: 0px;
+			    }
+		    	img{
+		    		width: 30px;
+		    		height: 30px;
+		    		float: left;
+		    		margin-right: 10px;
+		    	}
+			}
+	    }
+	}
+	.details{
+		border:1px solid black;
+	}
+	footer{
+	    background: #f7f7f7;
+	    height: 50px;
+	    display: flex;
+	    text-align: center;
+	    align-items: center;
+	    p{
+	    	margin: 0px;
+	    }
+	}
+
+	// Elements
+	.btn{
+		cursor: pointer;
+	}
+}
