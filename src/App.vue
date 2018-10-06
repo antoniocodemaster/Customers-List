@@ -7,7 +7,7 @@
           <customerslist/>
         </div>
         <div class="details col-md-8">
-          <customersinfo/>
+          <router-view/>
         </div>
       </div>
     </div>
@@ -22,15 +22,13 @@ import clnav from './components/layout/clnav.vue'
 import clfooter from './components/layout/clfooter.vue'
 
 import customerslist from './components/customerslist.vue'
-import customersinfo from './components/customersinfo.vue'
 
 export default {
   name: 'app',
   components:{
     clfooter,
     clnav,
-    customerslist,
-    customersinfo
+    customerslist
   },
   data () {
     return {
