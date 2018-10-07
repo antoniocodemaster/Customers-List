@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="app">
     <clnav/>
+    <algo/>
     <div class="container appcontainer">
       <div class="row">
         <div class="list col-md-4">
@@ -22,13 +23,15 @@ import clnav from './components/layout/clnav.vue'
 import clfooter from './components/layout/clfooter.vue'
 
 import customerslist from './components/customerslist.vue'
+import algo from './components/algo.vue'
 
 export default {
   name: 'app',
   components:{
     clfooter,
     clnav,
-    customerslist
+    customerslist,
+    algo
   },
   data () {
     return {
