@@ -4,21 +4,21 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-
-
-let customers = 'los customers',
-	url = 'https://randomuser.me/api/?results=5000'
+let customers,
+	url = 'https://randomuser.me/api/?results=5'
 
 axios
  .get(url)
- .then( response => (customers = response))
+ .then( response => (customers = response.data.results))
 
 const store = new Vuex.Store({
 	state:{
-		customers: customers
+		customers: 'nada'
 	},
-	mutations:{
-
+	actions:{
+		darvalor(){
+			return state.customers = 'algo';
+		}
 	}
 })
 
