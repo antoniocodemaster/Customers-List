@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 let customers,
-	url = 'https://randomuser.me/api/?results=5'
+	url = 'https://randomuser.me/api/?results=20'
 
 axios
  .get(url)
@@ -13,11 +13,18 @@ axios
 
 const store = new Vuex.Store({
 	state:{
-		customers: 'nada'
+		customersList: []
+	},
+	mutations:{
+		getCustomersList(){
+			axios
+			 .get(url)
+			 .then( response => (this.state.customersList = response.data.results))
+		}
 	},
 	actions:{
-		darvalor(){
-			return state.customers = 'algo';
+		actionGetList(context) {
+			context.commit('getCustomersList')
 		}
 	}
 })
