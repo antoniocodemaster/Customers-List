@@ -13,13 +13,17 @@ axios
 
 const store = new Vuex.Store({
 	state:{
-		customersList: []
+		customersList: [],
+		selectedCustomer: []
 	},
 	mutations:{
 		getCustomersList(){
 			axios
 			 .get(url)
 			 .then( response => (this.state.customersList = response.data.results))
+		},
+		selectCustomer(state, payload){
+			this.state.selectedCustomer = payload;
 		}
 	},
 	actions:{
