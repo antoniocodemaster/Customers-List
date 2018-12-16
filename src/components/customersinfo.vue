@@ -1,11 +1,14 @@
 <template>
 	<div>
-		<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-1/16196015_10154888128487744_6901111466535510271_n.png?_nc_cat=0&oh=3159408d7aa93eaa5bfb08ae78208d80&oe=5C068B59" alt="">
+		<img :src="selectedCustomer.picture.large" alt="">
 		<p><b>Name: </b> {{ selectedCustomer.name.first }}</p>
-		<p><b>Phone Number: </b> 909-909-9999</p>
-		<p><b>Email: </b> email@email.com</p>
-		<p><b>Address: </b> 1234 Free Lake</p>
-		<p><b>Birthday: </b> 04/08/1992 </p>
+		<p><b>Phone Number: </b> {{ selectedCustomer.phone }}</p>
+		<p><b>Email: </b> {{ selectedCustomer.email }}</p>
+		<p><b>Address: </b> {{ selectedCustomer.location.street }}</p>
+		<p><b>Birthday: </b> {{ selectedCustomer.dob.date }} </p>
+		<p><b>Age: </b> {{ selectedCustomer.dob.age }} </p>
+		<router-link class="btn btn-primary btn-sm" to="editcustomer">Edit</router-link>
+		<button class="btn btn-danger btn-sm">Remove</button>
 	</div>
 </template>
 <script>
@@ -16,6 +19,9 @@
 		name: 'customersinfo',
 		computed: {
 			...mapState(['selectedCustomer'])
+		},
+		methods :{
+
 		}
 	}
 	
