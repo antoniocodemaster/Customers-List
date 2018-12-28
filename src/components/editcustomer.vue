@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h2>Edit</h2>
-		<form action="">
+		<form action="" v-on:submit.preventDefault="editCustomer()">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
@@ -100,7 +100,7 @@
 					</div>
 				</div>
 			</div>
-			<input type="text" submit value="Save">
+			<input class="btn btn-primary btn-sm" type="submit" value="Save">
 		</form>
 	</div>
 </template>
@@ -112,6 +112,11 @@
 		name : 'editcustomer',
 		computed : {
 			...mapState(['selectedCustomer'])
+		},
+		methods : {
+			editCustomer(){
+				this.$store.commit('editCustomer',this.selectedCustomer)
+			}
 		}
 	}
 </script>

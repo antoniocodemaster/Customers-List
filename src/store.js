@@ -14,7 +14,8 @@ axios
 const store = new Vuex.Store({
 	state:{
 		customersList: [],
-		selectedCustomer: []
+		selectedCustomer: [],
+		customerRemoved: false
 	},
 	mutations:{
 		getCustomersList(){
@@ -28,6 +29,27 @@ const store = new Vuex.Store({
 		},
 		selectCustomer(state, payload){
 			this.state.selectedCustomer = payload
+			this.state.customerRemoved = false
+		},
+		editCustomer(state, payload){
+			let customersList = this.state.customersList
+			for (let i = 0; i < customersList.length; i++) {
+				if (payload.email == customersList[i].email) {
+					customersList[i] = payload
+					break
+				}
+			}
+		},
+		removeCustomer(state, payload){
+			let customersList = this.state.customersList
+			let _this = this
+			for (let i = 0; i < customersList.length; i++) {
+				if (payload.email == customersList[i].email) {
+					customersList.splice(i,1)
+					_this.state.customerRemoved = true
+					break
+				}
+			}
 		}
 	},
 	actions:{
