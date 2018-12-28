@@ -100,6 +100,7 @@
 					</div>
 				</div>
 			</div>
+			<input type="text" submit value="Save">
 		</form>
 	</div>
 </template>

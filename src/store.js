@@ -22,8 +22,12 @@ const store = new Vuex.Store({
 			 .get(url)
 			 .then( response => (this.state.customersList = response.data.results))
 		},
+		createCustomer(state, payload){	
+			this.state.customersList.push(payload)
+			this.state.selectedCustomer = payload
+		},
 		selectCustomer(state, payload){
-			this.state.selectedCustomer = payload;
+			this.state.selectedCustomer = payload
 		}
 	},
 	actions:{

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h2>Add New</h2>
-		<form action="">
+		<form action="" v-on:submit.preventDefault="createCustomer()">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
@@ -100,6 +100,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<input type="submit" class="btn btn-sm btn-primary" value="Create">
+				</div>
+			</div>
 		</form>
 	</div>
 </template>
@@ -112,20 +117,36 @@
 			return {
 				newCustomer : {
 					name : {
-						first : 'Carlos',
-						last : 'Carlos'
+						first : '',
+						last : ''
 					},
 					dob : {
-						age : 'age'
+						age : ''
 					},
 					location : {
-						street : 'street',
-						city : 'city',
-						postcode : 'post code'
+						street : '',
+						city : '',
+						postcode : ''
+					},
+					picture : {
+						large : 'src/assets/profile-sample.png',
+						medium : 'src/assets/profile-sample.png',
+						thumbnail : 'src/assets/profile-sample.png'
 					},	
-					email : 'email',
-					phone : 'phone',
-					gender : 'gender'
+					email : '',
+					phone : '',
+					gender : ''
+				}
+			}
+		},
+		methods: {
+			createCustomer(){
+				const newCustomer = this.newCustomer;
+				if (newCustomer.name.first != '') {
+					this.$store.commit('createCustomer', newCustomer)
+					this.$router.push('/customersinfo')
+				} else {
+					alert(`Please check the mandatory fields`)
 				}
 			}
 		}
