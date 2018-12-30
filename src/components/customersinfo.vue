@@ -11,8 +11,8 @@
 			<router-link class="btn btn-primary btn-sm" to="editcustomer">Edit</router-link>
 			<button v-on:click="removeCustomer()" class="btn btn-danger btn-sm">Remove</button>
 		</div>
-		<div v-else>
-			<p>No Customer Has Been Selected</p>
+		<div class="no-customer" v-else>
+			<p>Please select a customer to view his information</p>
 		</div>
 	</div>
 </template>
@@ -39,6 +39,12 @@
 <style lang="scss">
 	@import "src/scss/colors.scss";
 	.customers-info{
+		.no-customer{
+			text-align: center;
+			p{
+				font-size: 16px;
+			}
+		}
 		.name{
 			text-transform: capitalize;
 		}
@@ -47,6 +53,7 @@
 		    max-height: 130px;
 		    border-radius: 50%;
 		    border: 1px solid $secondary-color;
+		    margin-bottom: 15px;
 		}
 	}
 </style>
