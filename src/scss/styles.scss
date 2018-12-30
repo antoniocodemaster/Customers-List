@@ -1,12 +1,19 @@
+body{
+	background: #f8f6f9;
+}
 .app{
 	padding-top: 15px;
 	.appcontainer {
-	    border: 1px solid red;
 	    .main-content{
 	    	height: 70vh;
+	    	background: #fff;
 	    	.details{
 	    		padding-top: 15px;
 	    		padding-left: 15px;
+	    		padding-bottom: 15px;
+	    		height: 100%;
+    			overflow: scroll;
+    			border-left: 1px solid $primary-color;
 	    	}
 	    }
 	}

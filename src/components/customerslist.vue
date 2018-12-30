@@ -36,7 +36,6 @@
 
 <style lang="scss">
 	.list{
-		border:1px solid yellow;
 	    overflow-y: scroll;
 	    ul{
 	    	list-style: none;
@@ -59,6 +58,7 @@
 		    		height: 30px;
 		    		float: left;
 		    		margin-right: 10px;
+		    		border-radius: 50%;
 		    	}
 			}
 	    }

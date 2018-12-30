@@ -40,5 +40,6 @@ export default {
 
 <style lang="scss">
   @import "node_modules/bootstrap/scss/bootstrap";
-  @import "src/scss/styles.scss"
+  @import "src/scss/colors.scss";
+  @import "src/scss/styles.scss";
 </style>

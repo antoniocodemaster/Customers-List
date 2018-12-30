@@ -1,6 +1,7 @@
 <template>
-	<div>
-		<h2>Edit</h2>
+	<div class="editcustomer" >
+		<h2>Edit Customer</h2>
+		<img :src="selectedCustomer.picture.large" alt="">
 		<form action="" v-on:submit.preventDefault="editCustomer()">
 			<div class="row">
 				<div class="col-md-6">
@@ -120,3 +121,14 @@
 		}
 	}
 </script>
+
+<style lang="scss">
+	@import "src/scss/colors.scss";
+	.editcustomer{
+		img{
+			max-width: 130px;
+		    max-height: 130px;
+		    border-radius: 50%;
+		}
+	}
+</style>
