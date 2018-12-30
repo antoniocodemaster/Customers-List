@@ -3,6 +3,7 @@
     <li 
     	v-for="customer in customersList" 
     	v-on:click="selectCustomer(customer)"
+    	v-bind:class="{ active : customer.email == selectedCustomer.email }"
     >
     	<img :src="customer.picture.large" >
     	<p>
@@ -19,7 +20,7 @@
 	export default{
 		name:'customersList',
 		computed: {
-			...mapState(['customersList']),
+			...mapState(['customersList', 'selectedCustomer']),
 		},
 		methods: {
 			selectCustomer(customer){
@@ -35,6 +36,7 @@
 </script>
 
 <style lang="scss">
+	@import "src/scss/colors.scss";
 	.list{
 	    overflow-y: scroll;
 	    ul{
@@ -60,6 +62,12 @@
 		    		margin-right: 10px;
 		    		border-radius: 50%;
 		    	}
+			}
+			li.active{
+				background: $secondary-color;
+				p{
+					color:#fff;
+				}
 			}
 	    }
 	}
