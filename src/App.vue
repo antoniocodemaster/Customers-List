@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <clnav/>
     <div class="container appcontainer">
-      <div class="row">
+      <div class="row main-content">
         <div class="list col-md-4">
           <customerslist/>
         </div>

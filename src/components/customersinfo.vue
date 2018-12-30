@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<div class="customers-info" >
 		<div v-if="selectedCustomer.name && customerRemoved != true">
 			<img :src="selectedCustomer.picture.large" alt="">
-			<p><b>Name: </b> {{ selectedCustomer.name.first }}</p>
+			<p class="name" ><b>Name: </b> {{ selectedCustomer.name.first }}</p>
 			<p><b>Phone Number: </b> {{ selectedCustomer.phone }}</p>
 			<p><b>Email: </b> {{ selectedCustomer.email }}</p>
 			<p><b>Address: </b> {{ selectedCustomer.location.street }}</p>
@@ -35,3 +35,18 @@
 	}
 	
 </script>
+
+<style lang="scss">
+	@import "src/scss/colors.scss";
+	.customers-info{
+		.name{
+			text-transform: capitalize;
+		}
+		img{
+			max-width: 130px;
+		    max-height: 130px;
+		    border-radius: 50%;
+		    border: 1px solid $secondary-color;
+		}
+	}
+</style>
