@@ -1,12 +1,29 @@
 body{
 	background: #f8f6f9;
+	font-family: arial !important;
 }
 .app{
 	padding-top: 15px;
+	h1{
+		font-size: 18px;
+	    width: 100%;
+	    padding: 0px;
+	    margin: 7px 0px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	p{
+		font-size: 14px;
+	}
+	label{
+		font-size: 14px;
+	}
 	.appcontainer {
 	    .main-content{
 	    	height: 70vh;
 	    	background: #fff;
+	    	border: 1px solid $primary-color;
 	    	.details{
 	    		padding-top: 15px;
 	    		padding-left: 15px;
@@ -14,6 +31,9 @@ body{
 	    		height: 100%;
     			overflow: scroll;
     			border-left: 1px solid $primary-color;
+    			h2{
+    				margin-bottom: 15px;
+    			}
 	    	}
 	    }
 	}
