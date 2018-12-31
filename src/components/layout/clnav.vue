@@ -3,7 +3,7 @@
 <!--   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button> -->
-  <h1>Customer's List, by Antonio Flores</h1>
+  <h1>Customer's List, by <a href="http://antoniofloresonline.com/" target="new">Antonio Flores</a></h1>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -30,6 +30,19 @@
   nav{
     background: $primary-color;
     border-radius: 5px 5px 0px 0px;
+    h1{
+      a{
+        color: #fff;
+        text-decoration: underline;
+      }
+      a:hover{
+        color: #fff;
+        opacity: 0.8;
+      }
+      a:visited{
+        color: #fff !important;
+      }
+    }
   }
 </style>
 
