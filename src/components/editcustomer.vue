@@ -1,5 +1,5 @@
 <template>
-	<div class="editcustomer" >
+	<div class="editcustomer" v-if="selectedCustomer.name" >
 		<h2>Edit Customer</h2>
 		<img :src="selectedCustomer.picture.large" alt="">
 		<form action="" v-on:submit.preventDefault="editCustomer()">
@@ -117,6 +117,7 @@
 		methods : {
 			editCustomer(){
 				this.$store.commit('editCustomer',this.selectedCustomer)
+				this.$router.push('/customersinfo')
 			}
 		}
 	}
