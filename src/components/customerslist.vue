@@ -38,7 +38,8 @@
 <style lang="scss">
 	@import "src/scss/colors.scss";
 	.list{
-	    overflow-y: scroll;
+			overflow-y: scroll;
+			max-height: 100%;
 	    ul{
 	    	list-style: none;
 	    	padding:0px;
