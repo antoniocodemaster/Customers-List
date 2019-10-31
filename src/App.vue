@@ -1,45 +1,44 @@
 <template>
   <div id="app" class="app">
-    <clnav/>
+    <clnav />
     <div class="container appcontainer">
       <div class="row main-content">
         <div class="list col-md-4">
-          <customerslist/>
+          <customerslist />
         </div>
         <div class="details col-md-8">
-          <router-view/>
+          <router-view />
         </div>
       </div>
     </div>
-    <clfooter/>
+    <clfooter />
   </div>
 </template>
 
 <script>
-
 // Layout
-import clnav from './components/layout/clnav.vue'
-import clfooter from './components/layout/clfooter.vue'
+import clnav from "./components/layout/clnav.vue";
+import clfooter from "./components/layout/clfooter.vue";
 
-import customerslist from './components/customerslist.vue'
+import customerslist from "./components/customerslist.vue";
 
 export default {
-  name: 'app',
-  components:{
+  name: "app",
+  components: {
     clfooter,
     clnav,
     customerslist
   },
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+      msg: "Welcome to Your Vue.js App"
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
-  @import "node_modules/bootstrap/scss/bootstrap";
-  @import "src/scss/colors.scss";
-  @import "src/scss/styles.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "src/scss/colors.scss";
+@import "src/scss/styles.scss";
 </style>
