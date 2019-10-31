@@ -25,6 +25,14 @@ body {
       height: 70vh;
       background: #fff;
       border: 1px solid $primary-color;
+      @media only screen and (max-width: 767px) {
+        height: auto;
+      }
+      .list {
+        @media only screen and (max-width: 767px) {
+          max-height: 40vh;
+        }
+      }
       .details {
         padding-top: 15px;
         padding-left: 15px;
