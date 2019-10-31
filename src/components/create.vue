@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Add New</h2>
-    <form action v-on:submit.preventDefault="createCustomer()">
+    <form action v-on:submit.prevent="createCustomer()">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">

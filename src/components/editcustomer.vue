@@ -2,7 +2,7 @@
   <div class="editcustomer" v-if="selectedCustomer.name">
     <h2>Edit Customer</h2>
     <img :src="selectedCustomer.picture.large" alt />
-    <form action v-on:submit.preventDefault="editCustomer()">
+    <form action v-on:submit.prevent="editCustomer()">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
