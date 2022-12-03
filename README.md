@@ -1,27 +1,24 @@
-# Customers List
+# hello-world
 
-> This is a one single page web application that uses the frame work Vue.js. And also uses all the following concepts that are not only the fundamentals of modern front end web development, but are also shared among the most popular JavaScript frame works like angular, react and vue:
-
-- Components
-- Templating
-- Data Biding
-- Data Flow
-- State Management
-- Back end APIs Connection
-- Client Side Routing
-- Frontend Builds
-
-## Build Setup
-
-```bash
-# install dependencies
+## Project setup
+```
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-# build for production with minification
+### Compiles and minifies for production
+```
 npm run build
 ```
 
-To view this Web Application in action, please vising the following link: (http://antonioflores.me/portfolio/customers-list).
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,16 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import routes from "./routes";
+import { createApp } from "vue";
+import router from "./router";
 import store from "./store";
 import App from "./App.vue";
 
-Vue.use(VueRouter);
+const app = createApp(App);
+app.use(store);
+app.use(router);
 
-const router = new VueRouter({ routes });
-
-new Vue({
-  el: "#app",
-  render: h => h(App),
-  router,
-  store
-});
+app.mount("#app");
