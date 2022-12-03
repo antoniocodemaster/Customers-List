@@ -1,11 +1,18 @@
+import { createRouter, createWebHistory } from "vue-router";
+
 import create from "./components/create.vue";
 import customersinfo from "./components/customersinfo.vue";
 import editcustomer from "./components/editcustomer.vue";
 
-const router = [
-  { path: "/create", component: create, name: "create" },
-  { path: "/customersinfo", component: customersinfo, name: "customersinfo" },
-  { path: "/editcustomer", component: editcustomer, name: "editcustomer" }
+const routes = [
+  { path: "/create", name: "create", component: create },
+  { path: "/customersinfo", name: "customersinfo", component: customersinfo },
+  { path: "/editcustomer", name: "editcustomer", component: editcustomer },
 ];
+
+const router = createRouter({
+  routes,
+  history: createWebHistory("http://localhost:8080/"),
+});
 
 export default router;
