@@ -1,25 +1,19 @@
 import axios from "axios";
-import Vue from "vue";
-import Vuex from "vuex";
+import { createStore } from "vuex";
 
-Vue.use(Vuex);
+let url = "https://randomuser.me/api/?results=20";
 
-let customers,
-  url = "https://randomuser.me/api/?results=20";
-
-axios.get(url).then(response => (customers = response.data.results));
-
-const store = new Vuex.Store({
+export default createStore({
   state: {
     customersList: [],
     selectedCustomer: [],
-    customerRemoved: false
+    customerRemoved: false,
   },
   mutations: {
     getCustomersList() {
       axios
         .get(url)
-        .then(response => (this.state.customersList = response.data.results));
+        .then((response) => (this.state.customersList = response.data.results));
     },
     createCustomer(state, payload) {
       this.state.customersList.push(payload);
@@ -48,13 +42,11 @@ const store = new Vuex.Store({
           break;
         }
       }
-    }
+    },
   },
   actions: {
     actionGetList(context) {
       context.commit("getCustomersList");
-    }
-  }
+    },
+  },
 });
-
-export default store;
