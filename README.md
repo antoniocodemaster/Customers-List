@@ -24,4 +24,4 @@ npm run dev
 npm run build
 ```
 
-To view this Web Application in action, please vising the following link: (http://antonioflores.me/portfolio/customers-list).
+To view this Web Application in action, please vising the following link: (http://customers-list.antonioflores.me).
